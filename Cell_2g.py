@@ -34,6 +34,12 @@ class Cell_2g:
         diff=abs(self.bcch-cellB.bcch)
         if (diff<=1):
             return True
-        return False       
-    
+        return False    
+    def toList(self):
+        return [int(self.cid),int(self.bcch),int(self.bsic)],['cell','bcch','bsic']
+    def set_param(self,param_name,value):
+        if param_name=='bcch':
+            self.bcch=value
+        if param_name=='bsic':
+            self.bsic=value
       
